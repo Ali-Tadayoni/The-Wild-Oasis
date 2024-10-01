@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import BookingDataBox from "../../features/bookings/BookingDataBox";
-import { FaLessThan } from "react-icons/fa6";
 
 import Row from "../../ui/Row";
 import Heading from "../../ui/Heading";
