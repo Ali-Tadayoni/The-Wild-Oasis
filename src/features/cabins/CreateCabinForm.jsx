@@ -22,7 +22,6 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
   const { errors } = formState;
 
   function onSubmit(data) {
-    // console.log(data);
     const image = typeof data.image === "string" ? data.image : data.image[0];
 
     if (isEditSession) {
@@ -48,7 +47,6 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
     }
   }
 
-  // eslint-disable-next-line no-unused-vars
   function onError(errors) {
     // console.log(errors);
   }
