@@ -12,7 +12,6 @@ const StyledUserAvatar = styled.div`
 
 const Avatar = styled.img`
   display: block;
-  width: 4rem;
   width: 3.6rem;
   aspect-ratio: 1;
   object-fit: cover;
@@ -26,10 +25,7 @@ function UserAvatar() {
   const { fullName, avatar } = user.user_metadata;
   return (
     <StyledUserAvatar>
-      <Avatar
-        src={avatar || "default-user.jpg"}
-        alt={`Avatar of ${fullName}`}
-      />
+      <Avatar src={avatar || "default-user.jpg"} alt={`Avatar of ${fullName}`} />
       <span>{fullName}</span>
     </StyledUserAvatar>
   );
