@@ -1,13 +1,21 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
+import DemoBanner from "./DemoBanner";
 import styled from "styled-components";
 
+const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`;
+
 const StyledAppLayout = styled.div`
+  flex: 1;
   display: grid;
   grid-template-columns: 26rem 1fr;
   grid-template-rows: auto 1fr;
-  height: 100vh;
+  min-height: 0;
 `;
 
 const Main = styled.main`
@@ -26,15 +34,18 @@ const Container = styled.div`
 
 function AppLayout() {
   return (
-    <StyledAppLayout>
-      <Sidebar />
-      <Header />
-      <Main>
-        <Container>
-          <Outlet />
-        </Container>
-      </Main>
-    </StyledAppLayout>
+    <PageWrapper>
+      <DemoBanner />
+      <StyledAppLayout>
+        <Sidebar />
+        <Header />
+        <Main>
+          <Container>
+            <Outlet />
+          </Container>
+        </Main>
+      </StyledAppLayout>
+    </PageWrapper>
   );
 }
 

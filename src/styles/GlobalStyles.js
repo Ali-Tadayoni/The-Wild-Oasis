@@ -115,6 +115,14 @@ html {
   font-size: 62.5%;
 }
 
+html.light-mode {
+  color-scheme: light;
+}
+
+html.dark-mode {
+  color-scheme: dark;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: var(--color-grey-700);
